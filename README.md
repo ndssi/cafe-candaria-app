@@ -246,3 +246,43 @@ Dokumentasi teknis lengkap mengenai komponen, aliran request, model data, autent
 ## Lisensi
 
 Project ini menggunakan Laravel sebagai framework dengan lisensi MIT. Lisensi aplikasi dapat ditetapkan oleh pemilik project sesuai kebutuhan distribusi dan deployment.
+
+
+---
+
+## Informasi Kontak
+
+- Nama: Cafe Candaria
+- Sekolah: SMKN 2 Purwakarta
+- Alamat: Jalan Jenderal A. Yani Nomor 98, Nagri Tengah, Kec. Purwakarta, Kabupaten Purwakarta, Jawa Barat 41114
+- WhatsApp: tersedia melalui tombol chat di halaman utama
+
+---
+
+## Menjalankan Testing
+
+```bash
+php artisan test
+```
+
+---
+
+## Catatan Produksi
+
+- Jangan commit file `.env` ke repository
+- Ganti password admin default setelah deployment
+- Pastikan web server mengarah ke folder `public`
+- Aktifkan `APP_DEBUG=false` saat environment production
+- Gunakan HTTPS untuk login admin agar session aman
+
+---
+
+## Lisensi
+
+Project ini dibuat untuk kebutuhan website profil cafe sekolah dan dapat dikembangkan lebih lanjut sesuai kebutuhan operasional dan branding instansi.
+
+---
+
+## Dokumentasi Tambahan
+
+Dokumentasi arsitektur project juga tersedia di [ARCHITECTURE.md](ARCHITECTURE.md).
