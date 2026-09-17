@@ -1,0 +1,327 @@
+/* Variabel Warna (:root) */
+:root {
+  --bg-sidebar: #cbf9b8;           /* Hijau pastel sidebar */
+  --bg-sidebar-active: #b1e89b;    /* Hijau untuk menu aktif */
+  --bg-body: #ffffff;              /* Background utama putih */
+  --bg-card-btn: #cbfaa2;          /* Hijau muda tombol Kelola */
+  --text-dark: #274c1a;            /* Hijau tua untuk judul-judul */
+  --text-main: #2b2b2b;            /* Hitam/abu gelap untuk teks biasa */
+  --border-light: #d8d8d8;         /* Border halus abu-abu */
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-card: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body.dashboard-body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Main Layout Container */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR STYLING ================= */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  padding: 16px 0;
+}
+
+.sidebar-top-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Logo Box Header */
+.sidebar-logo-box {
+  background-color: #ffffff;
+  margin: 0 14px 20px 14px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1.5px solid #a2b79a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-logo {
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title-sidebar {
+  font-size: 15px;
+  font-weight: 700;
+  font-style: italic;
+  color: #274c1a;
+  line-height: 1.1;
+  font-family: serif;
+}
+
+.brand-sub-sidebar {
+  font-size: 7px;
+  font-weight: 700;
+  color: #333333;
+}
+
+/* Sidebar Nav Elements */
+.sidebar-menu-wrapper {
+  padding: 4px 0;
+}
+
+.sidebar-section-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #000000;
+  padding: 0 20px 16px 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  transition: background-color 0.2s;
+}
+
+.nav-item.active {
+  background-color: var(--bg-sidebar-active);
+  font-weight: 600;
+}
+
+.nav-item:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* LOGOUT BUTTON IN SIDEBAR */
+.sidebar-bottom-logout {
+  padding: 0 20px;
+}
+
+.btn-sidebar-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #e60000;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-sidebar-logout:hover {
+  background-color: #cc0000;
+}
+
+.btn-sidebar-logout:active {
+  transform: scale(0.98);
+}
+
+.btn-sidebar-logout svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ================= MAIN CONTENT STYLING ================= */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 36px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* Top Navbar Header */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+/* Admin Badge Pill */
+.admin-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f7fef4;
+  border: 1.5px solid #d0d0d0;
+  padding: 4px 20px 4px 14px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-icon {
+  width: 20px;
+  height: 20px;
+  color: #000000;
+}
+
+.admin-text {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: #274c1a;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Welcome Text Section */
+.welcome-section {
+  margin-bottom: 22px;
+  max-width: 900px;
+}
+
+.welcome-title {
+  font-size: 26px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.welcome-subtitle {
+  font-size: 13px;
+  color: #4b4b4b;
+  margin-top: 2px;
+}
+
+/* Dashboard Panel Container */
+.dashboard-panel {
+  border: 2px solid #cfcfcf;
+  border-radius: 20px;
+  padding: 28px 28px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Cards Grid Alignment */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Inner Card Component */
+.dash-card {
+  background-color: #ffffff;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 18px;
+  padding: 26px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 14px var(--shadow-card);
+  min-height: 200px;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 11px;
+  color: #333333;
+  line-height: 1.4;
+  margin-bottom: auto;
+  max-width: 170px;
+}
+
+/* Kelola Button Inside Card */
+.btn-kelola {
+  display: inline-block;
+  background-color: var(--bg-card-btn);
+  color: #1a3317;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 36px;
+  border-radius: 20px;
+  transition: transform 0.1s, background-color 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.btn-kelola:hover {
+  background-color: #b8f28a;
+  transform: translateY(-1px);
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 12px 0;
+  }
+  .main-content {
+    padding: 16px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

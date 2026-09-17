@@ -1,0 +1,9 @@
+/* FIX: aturan untuk tombol hamburger yang sebelumnya tidak berfungsi */
+.sidebar.sidebar-hidden {
+    display: none !important;
+}
+
+.hamburger-btn,
+.toggle-btn {
+    cursor: pointer;
+}

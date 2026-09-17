@@ -1,0 +1,314 @@
+:root {
+  --bg-sidebar: #c2f5a5;
+  --bg-sidebar-active: #a7e089;
+  --bg-body: #ffffff;
+  --bg-card-light: #f7fef4;
+  --text-dark-green: #274c1a;
+  --text-main: #2b2b2b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body.dashboard-body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR STYLING */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  min-height: 100vh;
+}
+
+.sidebar-top-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo-box {
+  background-color: #ffffff;
+  margin: 14px 12px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1.5px solid #d0d0d0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-logo {
+  width: 36px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title-sidebar {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-dark-green);
+  line-height: 1.1;
+}
+
+.brand-sub-sidebar {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.sidebar-menu-wrapper {
+  padding: 10px 0;
+}
+
+.sidebar-section-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #000000;
+  padding: 8px 24px 14px 24px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  transition: background-color 0.2s;
+}
+
+.nav-item.active {
+  background-color: var(--bg-sidebar-active);
+  font-weight: 600;
+}
+
+.nav-item:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* LOGOUT DI BAWAH SIDEBAR */
+.sidebar-bottom-logout {
+  padding: 20px;
+}
+
+.btn-sidebar-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.btn-sidebar-logout:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.btn-sidebar-logout svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* MAIN CONTENT AREA */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+.top-right-section {
+  display: flex;
+  align-items: center;
+}
+
+.admin-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f2fbe8;
+  border: 1.5px solid #c0c0c0;
+  padding: 4px 18px 4px 12px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-icon {
+  width: 22px;
+  height: 22px;
+  color: #000000;
+}
+
+.admin-text {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-dark-green);
+}
+
+/* DELETE CARD STYLING */
+.delete-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.delete-card {
+  background-color: var(--bg-card-light);
+  border: 2px solid #b8c8b0;
+  border-radius: 18px;
+  padding: 40px 32px 32px 32px;
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ICON TRASH */
+.trash-icon-box {
+  background-color: #dcdcdc;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.trash-icon-box svg {
+  width: 26px;
+  height: 26px;
+  color: #000000;
+}
+
+.delete-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-dark-green);
+  margin-bottom: 10px;
+}
+
+.delete-description {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2b2b2b;
+  line-height: 1.4;
+  max-width: 320px;
+  margin-bottom: 36px;
+}
+
+/* TOMBOL AKSI */
+.delete-actions {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.btn-cancel {
+  flex: 1;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1.5px solid #a2b79a;
+  border-radius: 12px;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #f5f5f5;
+}
+
+.delete-actions form {
+  flex: 1;
+}
+
+.btn-confirm {
+  width: 100%;
+  background-color: #beed9f;
+  color: #1a1a1a;
+  border: 1.5px solid #94c776;
+  border-radius: 12px;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.btn-confirm:hover {
+  background-color: #aae388;
+}

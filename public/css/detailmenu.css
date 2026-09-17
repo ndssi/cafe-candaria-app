@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER STYLING */
+.menu-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.main-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #274c1a;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: #d8b068;
+  font-family: 'Poppins', Georgia, serif;
+}
+
+/* GRID LAYOUT (3 KOLOM, 2 BARIS) */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 36px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* CARD STYLING */
+.menu-card {
+  background-color: #ffffff;
+  border: 1.5px solid #a8a8a8;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 125px;
+  overflow: hidden;
+  border-bottom: 1.5px solid #e0e0e0;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px 12px 14px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d5520;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.item-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* BUTTON KEMBALI KE BERANDA */
+.menu-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-back {
+  text-decoration: none;
+  background-color: #2d8133;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: 1.5px solid #82c286;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: #246829;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
